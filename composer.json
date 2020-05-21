@@ -1,8 +1,8 @@
 {
-    "name": "daisanmu/laravel-easemob",
+    "name": "link1st/laravel-easemob",
     "description": "环信即时通讯laravel包开发，用于环信用户、群、聊天室等功能",
     "keywords": [
-        "daisanmu",
+        "link1st",
         "laravel",
         "easemob"
     ],    
@@ -14,13 +14,13 @@
     },
     "authors": [
         {
-            "name": "daisanmu",
-            "email": "royeedai@gmail.com"
+            "name": "link1st",
+            "email": "link12stl@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "daisanmu\\Easemob\\": "src/"
+            "link1st\\Easemob\\": "src/"
         }
     }
 }

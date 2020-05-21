@@ -97,16 +97,16 @@ $user = \Easemob::getUserAll(100,'LTgzNDAxMjM3OTprcFJFRUpzdUVlYWh5V1UwQjNSbldR')
 `\Easemob::sendMessageText($users, $target_type = 'users', $message = "", $send_user = 'admin', $ext = []);`
 
 ### 发送图片消息
-`\Easemob::sendMessageImg($users, $target_type = 'users', $uuid, $share_secret, $file_name, $width = 480, $height = 720, $send_user = 'admin');`
+`\Easemob::sendMessageImg($users, $target_type = 'users', $uuid, $share_secret, $file_name, $width = 480, $height = 720, $send_user = 'admin', $ext = []);`
 
 ### 发送语音消息
-`\Easemob::sendMessageAudio($users, $target_type = 'users', $uuid, $share_secret, $file_name, $length = 10, $send_user = 'admin');`
+`\Easemob::sendMessageAudio($users, $target_type = 'users', $uuid, $share_secret, $file_name, $length = 10, $send_user = 'admin', $ext = []);`
 
 ### 发送视频消息
-`\Easemob::sendMessageVideo($users, $target_type = 'users', $video_uuid, $video_share_secret, $video_file_name, $length = 10, $video_length = 58103, $img_uuid, $img_share_secret, $send_user = 'admin');`
+`\Easemob::sendMessageVideo($users, $target_type = 'users', $video_uuid, $video_share_secret, $video_file_name, $length = 10, $video_length = 58103, $img_uuid, $img_share_secret, $send_user = 'admin', $ext = []);`
 
 ### 消息透传
-`\Easemob::sendMessagePNS($users, $target_type = 'users', $action = "", $send_user = 'admin');`
+`\Easemob::sendMessagePNS($users, $target_type = 'users', $action = "", $send_user = 'admin', $ext = []);`
 
 - - - 
 ### 获取群信息

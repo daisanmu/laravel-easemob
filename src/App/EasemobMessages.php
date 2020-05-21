@@ -66,7 +66,7 @@ trait EasemobMessages
      * @return mixed
      * @throws EasemobError
      */
-    public function sendMessageImg($users, $target_type = 'users', $uuid, $share_secret, $file_name, $width = 480, $height = 720, $send_user = 'admin')
+    public function sendMessageImg($users, $target_type = 'users', $uuid, $share_secret, $file_name, $width = 480, $height = 720, $send_user = 'admin', $ext = [])
     {
         if ( ! in_array($target_type, $this->target_array)) {
             throw new EasemobError('target_type 参数错误！');
@@ -88,6 +88,10 @@ trait EasemobMessages
             ],
             'from'        => $send_user
         ];
+        // 是否有消息扩展
+        if ( ! empty($ext)) {
+            $option['ext'] = $ext;
+        }
         $access_token = $this->getToken();
         $header []    = 'Authorization: Bearer '.$access_token;
 
@@ -109,7 +113,7 @@ trait EasemobMessages
      * @return mixed
      * @throws EasemobError
      */
-    public function sendMessageAudio($users, $target_type = 'users', $uuid, $share_secret, $file_name, $length = 10, $send_user = 'admin')
+    public function sendMessageAudio($users, $target_type = 'users', $uuid, $share_secret, $file_name, $length = 10, $send_user = 'admin', $ext = [])
     {
         if ( ! in_array($target_type, $this->target_array)) {
             throw new EasemobError('target_type 参数错误！');
@@ -128,6 +132,10 @@ trait EasemobMessages
             ],
             'from'        => $send_user
         ];
+        // 是否有消息扩展
+        if ( ! empty($ext)) {
+            $option['ext'] = $ext;
+        }
         $access_token = $this->getToken();
         $header []    = 'Authorization: Bearer '.$access_token;
 
@@ -165,7 +173,7 @@ trait EasemobMessages
      * @return mixed
      * @throws EasemobError
      */
-    public function sendMessageVideo($users, $target_type = 'users', $video_uuid, $video_share_secret, $video_file_name, $length = 10, $video_length = 58103, $img_uuid, $img_share_secret, $send_user = 'admin')
+    public function sendMessageVideo($users, $target_type = 'users', $video_uuid, $video_share_secret, $video_file_name, $length = 10, $video_length = 58103, $img_uuid, $img_share_secret, $send_user = 'admin', $ext = [])
     {
         if ( ! in_array($target_type, $this->target_array)) {
             throw new EasemobError('target_type 参数错误！');
@@ -187,6 +195,10 @@ trait EasemobMessages
             ],
             'from'        => $send_user
         ];
+        // 是否有消息扩展
+        if ( ! empty($ext)) {
+            $option['ext'] = $ext;
+        }
         $access_token = $this->getToken();
         $header []    = 'Authorization: Bearer '.$access_token;
 
@@ -205,7 +217,7 @@ trait EasemobMessages
      * @return mixed
      * @throws EasemobError
      */
-    public function sendMessagePNS($users, $target_type = 'users', $action = "", $send_user = 'admin')
+    public function sendMessagePNS($users, $target_type = 'users', $action = "", $send_user = 'admin', $ext = [])
     {
         if ( ! in_array($target_type, $this->target_array)) {
             throw new EasemobError('target_type 参数错误！');
@@ -221,6 +233,10 @@ trait EasemobMessages
             ],
             'from'        => $send_user
         ];
+        // 是否有消息扩展
+        if ( ! empty($ext)) {
+            $option['ext'] = $ext;
+        }
         $access_token = $this->getToken();
         $header []    = 'Authorization: Bearer '.$access_token;
 
